@@ -1,0 +1,1 @@
+function mogetfieldvalue(n,e){let t=e.match(/^([^\.]*)\.([^]*)/i);return null===t?n[e]:mogetfieldvalue(n[t[1]],t[2])}function mosetfieldvalue(n,e,t){let a=e.match(/^([^\.]*)\.([^]*)/i);null===a?n[e]=t:mosetfieldvalue(n[a[1]],a[2],t)}function mosetdefaults(n,e){Object.entries(n).forEach(([t,a])=>{void 0===e[t]&&(e[t]=a)})}
